@@ -1,0 +1,250 @@
+@charset "utf-8";
+
+
+.container--center {
+	background-color: rgba(237, 237, 237, 1);
+	width: 100%;
+	height: auto;
+	position: fixed;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: row;
+	z-index: 999;
+	padding: 0 0;
+}
+
+.logo {
+	width: 20%;
+	height: 100%;
+	min-height: 11vh;
+	background-image: url("../assets/img/logo-preta.png");
+	background-size: contain;
+	background-position: center center;
+	background-repeat: no-repeat;
+	position: relative;
+}
+
+.menu-drop {
+	width: 55%;
+	height: 11vh;
+	position: relative;
+	display: flex;
+	flex-flow: wrap;
+	justify-content: center;
+	align-items: center;
+}
+
+.menu-drop--ul {
+	width: 100%;
+	height: auto;
+}
+
+.menu-drop--li {
+	width: 100%;
+	height: auto;
+	list-style: none;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.menu-drop--ul .menu-drop--li a {
+	text-decoration: none;
+	height: 5vh;
+}
+
+.submenu-ul {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+}
+
+.submenu-li--item {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	height: 100%;
+	list-style: none;
+	flex-grow: 1;
+	background-color: rgba(237, 237, 237, 1);
+}
+
+.submenu-li--item a {
+	width: 100%;
+	height: 100%;
+	text-decoration: none;
+	font-weight: bold;
+	color: rgba(1, 1, 1, 0.8);
+	text-transform: uppercase;
+	font-size: 0.9em;
+	transition: all cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.5s;
+	-webkit-transition: all cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.5s;
+	-moz-transition: all cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.5s;
+	-ms-transition: all cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.5s;
+	-o-transition: all cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.5s;
+	margin-top: 5vh;
+}
+
+.submenu-li--item:hover a {
+	color: rgba(158, 142, 78, 1);
+	height: 5vh;
+	transform: translateY(-1vh);
+	-webkit-transform: translateY(-1vh);
+	-moz-transform: translateY(-1vh);
+	-ms-transform: translateY(-1vh);
+	-o-transform: translateY(-1vh);
+	padding: -12px 0;
+}
+
+.submenu-ul,
+.home-black {
+	background-color: rgba(1, 1, 1, 1);
+	height: 11vh;
+	margin-top: -5vh;
+}
+
+.home-black>a {
+	color: rgba(237, 237, 237, 1);
+	margin-top: 10vh;
+}
+
+/*
+...................... menu drp........................ 
+*/
+
+
+
+/* ////////////// ..........  ICONES DO MENU  ............///////////// */
+li.social-icon-menu {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+img.icon-spotify,
+img.icon-youtube,
+img.icon-face {
+	width: 2em;
+	height: 2em;
+	margin-top: -22px;
+	filter: invert(30%);
+	-webkit-filter: invert(30%);
+}
+
+@media screen and (min-width: 300px) and (max-width: 599px) {
+	.container--center {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+	}
+
+	.logo {
+		min-width: calc(100vw - 90%);
+		margin: 3px 0;
+	}
+
+	.menu-drop {
+		position: relative;
+		width: 100%;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
+		align-items: center;
+	}
+
+	.menu-drop--ul {
+		width: 100%;
+		height: auto;
+	}
+
+	.menu-drop--ul .menu-drop--li {
+		list-style: none;
+		text-align: center;
+		width: 100%;
+	}
+
+	.menu-drop--ul .menu-drop--li a {
+		text-decoration: none;
+		height: 10vh;
+		margin-top: 0;
+		padding: 10px 0;
+	}
+
+	.menu-drop--li .submenu-ul {
+		position: relative;
+		list-style: none;
+		transition: all 1s ease;
+		-webkit-transition: all 1s ease;
+		-moz-transition: all 1s ease;
+		-ms-transition: all 1s ease;
+		-o-transition: all 1s ease;
+	}
+
+	.menu-drop--li>a.menu-simbol--txt {
+		color: rgba(158, 142, 78, 1);
+		font-size: 1.5em;
+	}
+
+	/*... not (target) acessa o elemento que nao e alvo da ancora ..*/
+	.submenu-ul:not(:target) {
+		display: none;
+	}
+
+	.submenu-li--item {
+		width: 100%;
+		height: calc(100vh /7.5);
+	}
+
+	.submenu-li--item>a {
+		width: 100%;
+		height: 100%;
+		text-decoration: none;
+		color: rgba(1, 1, 1, 1);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.submenu-ul,
+	.home-black {
+		background-color: rgba(237, 237, 237, 1);
+		margin-top: 0;
+	}
+
+}
+
+@media screen and (max-device-width: 800px),
+screen and (max-width: 800px) {
+
+	.container--center {
+		display: inline-flex;
+		justify-content: space-evenly;
+	}
+
+	.menu-drop {
+		min-width: 60%;
+	}
+
+}
+
+@media screen and (max-device-width: 1000px),
+screen and (max-width: 1000px) {
+
+	.container--center {
+		display: inline-flex;
+		justify-content: space-evenly;
+	}
+
+	.menu-drop {
+		min-width: 70%;
+	}
+
+}
