@@ -1,4 +1,4 @@
-# MENI
+# BAND MENI
 
 ## This site is a generic (unofficial) and non-commercial project, only designed to promote the development of an application!
 
